@@ -41,3 +41,23 @@ def plot(X, y, y_preds):
     display.display(html)
 
     plt.close()
+
+
+def plot_one(X, y, y_preds):
+    fig = plt.figure(figsize=(12, 6))
+    plt.xlim((-4, 4))
+    plt.ylim((-1.5, 1.5))
+
+    plt.scatter(
+        X.value.flatten(),
+        y.value.flatten(),
+        s=0.5,
+        color="C0",
+    )
+
+    plt.scatter(
+        X.value.flatten(),
+        y_preds[-1],
+        s=0.5,
+        color="C1"
+    )
