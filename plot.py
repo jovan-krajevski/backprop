@@ -31,7 +31,7 @@ def plot(X, y, y_preds):
     def animation_function(frame):
         data = np.stack((X.value.flatten(), y_preds[frame])).T
         line_plotted.set_offsets(data)
-        plt.title(f"Epoch {frame * 100}")
+        plt.title(f"Epoch {frame * 10}")
 
     anim_created = FuncAnimation(
         fig, animation_function, frames=len(y_preds), interval=100
